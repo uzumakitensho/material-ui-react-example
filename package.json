@@ -10,7 +10,9 @@
     "faker": "^4.1.0",
     "react": "next",
     "react-dom": "next",
-    "react-scripts": "latest"
+    "react-scripts": "latest",
+    "react-swipeable-views": "^0.13.1",
+    "react-swipeable-views-utils": "^0.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
