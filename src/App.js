@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PersistentDrawerLeft from './PersistentDrawerLeft';
+import ResponsiveDrawer from './ResponsiveDrawer';
 
 const styles = {
   root: {
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div style={styles.root}>
-        <PersistentDrawerLeft></PersistentDrawerLeft>
+        <ResponsiveDrawer></ResponsiveDrawer>
       </div>
     );
   }
