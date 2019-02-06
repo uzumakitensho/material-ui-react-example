@@ -15,9 +15,12 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import NoSsr from '@material-ui/core/NoSsr';
 import MemoryRouter from 'react-router/MemoryRouter';
+import { Switch, Route } from 'react-router-dom';
 import SwipeableTextMobileStepper from './SwipeableTextMobileStepper';
 import ListItemLink from './ListItemLink';
 import ListItemLinkNoIcon from './ListItemLinkNoIcon';
+import Home from './Home';
+import About from './About';
 
 const drawerWidth = 240;
 
@@ -75,15 +78,15 @@ class ResponsiveDrawer extends React.Component {
                 </List>
                 <Divider />
                 <List>
-                    <ListItemLinkNoIcon to="/inbox" primary="Inbox" />
-                    <ListItemLinkNoIcon to="/mail" primary="Mail" />
+                    <ListItemLinkNoIcon to="/" primary="Home" />
+                    <ListItemLinkNoIcon to="/about" primary="About" />
                 </List>
             </div>
         );
 
         return (
             <NoSsr>
-                <MemoryRouter initialEntries={['/inbox']} initialIndex={0}>
+                <MemoryRouter initialEntries={['/']} initialIndex={0}>
                     <div className={classes.root}>
                         <CssBaseline />
                         <AppBar position="fixed" className={classes.appBar}>
@@ -130,6 +133,10 @@ class ResponsiveDrawer extends React.Component {
                         </nav>
                         <main className={classes.content}>
                             <div className={classes.toolbar} />
+                            <Switch>
+                                <Route exact path='/' component={Home}/>
+                                <Route path='/about' component={About}/>
+                            </Switch>
                             <SwipeableTextMobileStepper />
                             <Typography paragraph>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
