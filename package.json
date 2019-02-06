@@ -11,6 +11,7 @@
     "faker": "^4.1.0",
     "react": "next",
     "react-dom": "next",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "latest",
     "react-swipeable-views": "^0.13.1",
